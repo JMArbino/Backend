@@ -2,9 +2,20 @@
 
 {% load static %}
 
+{% block title %} {{post.title}} {% endblock title %}
+
 {% block content %}
-Post Detail View<br>
+Detalle de las noticias<br>
+
     {{post.title}}
     {{post.excerpt}}
     {{post.content}}
+    <br>
+    <a href="{% url 'home' %}">
+        Inicio del sitio<br>
+    </a>
+
+    <a href="{% url 'blog:home' %}">
+        Inicio de las noticias (blog)<br>
+    </a>
 {% endblock content %}

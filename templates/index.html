@@ -3,7 +3,15 @@
 {% block title %} Página de inicio {% endblock title %}
 
 {% block content %}
-HomePage<br>
-Página de inicio...<br>
+...Página de inicio...<br>
+<a href="{% url 'home' %}">
+    Institucional<br>
+</a>
+<a href="{% url 'blog:home' %}">
+    Noticias (Blog)<br>
+</a>
+<a name="" id="" class="btn btn-primary" href="#" role="button">Registrarse</a><br>
+<a name="" id="" class="btn btn-primary" href="#" role="button">Login</a><br>
+<a name="" id="" class="btn btn-primary" href="#" role="button">Contacto</a><br>
 {% endblock content %}
 
