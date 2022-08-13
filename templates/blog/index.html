@@ -6,7 +6,9 @@
 BlogHomePage<br>
 Página de inicio del blog...<br>
 {% for post in posts %}
+<a href="{% url 'blog:post-detail' slug=post.slug %}">
     {{post.title}}
     {{post.excerpt}}
+</a>
 {% endfor %}
 {% endblock content %}
