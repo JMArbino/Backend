@@ -11,8 +11,9 @@
 <a href="{% url 'blog:home' %}">
     Noticias (Blog)<br>
 </a>
-<a name="" id="" class="btn btn-primary" href="#" role="button">Registrarse</a><br>
-<a name="" id="" class="btn btn-primary" href="#" role="button">Login</a><br>
-<a name="" id="" class="btn btn-primary" href="#" role="button">Contacto</a><br>
+<a name="" id="" class="btn btn-primary" href="{% url 'users:register' %}" role="button">Registrarse</a><br>
+<a name="" id="" class="btn btn-primary" href="{% url 'users:login' %}" role="button">Login</a><br>
+<a name="" id="" class="btn btn-primary" href="{% url 'users:logout' %}" role="button">Logout</a><br>
+<a name="" id="" class="btn btn-primary" href="{% url 'about' %}" role="button">Contacto</a><br>
 {% endblock content %}
 
