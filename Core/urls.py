@@ -22,5 +22,9 @@ from .views import (HomePageView)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
+    path('', HomePageView.as_view(), name='about'),
     path('blog/', include('blog.urls', namespace='blog')),
+    path('users/', include(('users.urls', 'users'), namespace='users')),
 ]
+
+

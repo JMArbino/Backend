@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Instituto Barranqueras - Blog{% endblock title %}
 {% block content %}
+<<<<<<< HEAD
         <!-- Header -->
         <header class="header" id="header">
-
             <nav class="navbar container d-grid">
 
                 <a href="./index.html">
@@ -16,7 +16,8 @@
                             <a href="blog" class="list-link current">Home</a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="list-link">Institucional</a>
+                            <a href="{% url 'about' %}" class="list-link">Institucional</a>
+                            {% comment %} <a name="" id="" class="btn btn-primary" href="" role="button">Contacto</a> {% endcomment %}
                         </li>
                         <li class="list-item">
                             <a href="#" class="list-link">Noticias</a>
@@ -52,9 +53,12 @@
                         <i class="ri-close-line close-menu-icon"></i>
                     </button>
 
-                    <a href="#" class="list-link screen-sm-hidden">Acceder</a>
-                    <a href="#" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
+                    <a href="{% url 'users:login' %}" class="list-link screen-sm-hidden">Acceder</a>
+                    {% comment %} <a name="" id="" class="btn btn-primary" href="" role="button">Login</a>
+                    <a name="" id="" class="btn btn-primary" href="{% url 'users:logout' %}" role="button">Logout</a> {% endcomment %}
+                    <a href="{% url 'users:register' %}" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
                         <span>Registrarse</span>
+                        {% comment %} <a name="" id="" class="btn btn-primary" href="" role="button">Registrarse</a><br> {% endcomment %}
                     </a>
                 </div>
             </nav>
