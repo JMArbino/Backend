@@ -1,18 +1,357 @@
 {% extends 'base.html' %}
-
-{% block title %} Página de inicio {% endblock title %}
-
+{% block title %}Instituto Barranqueras - Blog{% endblock title %}
 {% block content %}
-...Nombre de la institución...<br>
-...Página de inicio...<br>
-<a href="{% url 'home' %}">
-    Institucional<br>
-</a>
-<a href="{% url 'blog:home' %}">
-    Noticias (Blog)<br>
-</a>
-<a name="" id="" class="btn btn-primary" href="#" role="button">Registrarse</a><br>
-<a name="" id="" class="btn btn-primary" href="#" role="button">Login</a><br>
-<a name="" id="" class="btn btn-primary" href="#" role="button">Contacto</a><br>
-{% endblock content %}
+        <!-- Header -->
+        <header class="header" id="header">
 
+            <nav class="navbar container d-grid">
+
+                <a href="./index.html">
+                    <img src="../static/images/Logo-Curvas-hor-02-303x119.png" alt="" class="logo-header-image">
+                    <h2 class="logo">Blog de noticias</h2>
+                </a>
+                <div class="menu" id="menu">
+                    <ul class="list">
+                        <li class="list-item">
+                            <a href="blog" class="list-link current">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Institucional</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Noticias</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Categorías</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Contacto</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link screen-lg-hidden">Acceder</a>
+                        </li>
+                        <li class="list-item screen-lg-hidden">
+                            <a href="#" class="list-link">Registrarse</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="list list-right">
+                    <button class="btn place-items-center" id="theme-toggle-btn">
+                        <i class="ri-sun-line sun-icon"></i>
+                        <i class="ri-moon-line moon-icon"></i>
+                    </button>
+
+                    <button class="btn place-items-center" id="search-icon-btn">
+                        <i class="ri-search-line"></i>
+                    </button>
+
+                    <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                        <i class="ri-menu-3-line open-menu-icon"></i>
+                        <i class="ri-close-line close-menu-icon"></i>
+                    </button>
+
+                    <a href="#" class="list-link screen-sm-hidden">Acceder</a>
+                    <a href="#" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
+                        <span>Registrarse</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Buscar -->
+        <div class="search-form-container container" id="search-form-container">
+
+            <div class="form-container-inner">
+
+                <form action="" class="form">
+                    <input type="text" class="form-input" placeholder="Buscar">
+                    <button class="btn form-btn" type="submit">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+                <span class="form-note">Presiona ESC para cerrar.</span>
+            </div>
+
+            <button class="btn form-close-btn place-items-center" id="form-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <!-- Featured articles -->
+        <section class="featured-articles section-header-offset">
+
+            <div class="featured-articles-container container d-grid">
+
+                <div class="featured-content d-grid">
+
+                    <div class="headline-banner">
+                        <h3 class="headline fancy-border">
+                            <span class="place-items-center">Ultimas Noticias</span>
+                        </h3>
+                        <span class="headline-description">Enterate de lo que está pasando en el IB!</span>
+                    </div>
+
+                    <a href="./post-detail.html" class="article featured-article featured-article-1">
+                        <img src="../static/images/featured/featured-1.jpg" alt="" class="article-image">
+                        <span class="article-category">Programacion</span>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                        </div>
+                    </a>
+
+                    <a href="./post.html" class="article featured-article featured-article-2">
+                        <img src="../static/images/featured/featured-2.jpg" alt="" class="article-image">
+                        <span class="article-category">Economia</span>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                        </div>
+                    </a>
+
+                    <a href="./post.html" class="article featured-article featured-article-3">
+                        <img src="../static/images/featured/featured-3.jpg" alt="" class="article-image">
+                        <span class="article-category">Inscripciones</span>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Sidebar-->
+                <div class="sidebar d-grid">
+
+                    <h3 class="title featured-content-title">Noticias Populares</h3>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-image-box">
+                            <span class="trending-number place-items-center">01</span>
+                            <img src="../static/images/trending/trending-1.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            
+                            <h3 class="title article-title">Otra noticia</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-image-box">
+                            <span class="trending-number place-items-center">02</span>
+                            <img src="../static/images/trending/trending-2.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            
+                            <h3 class="title article-title">Otra noticia</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-image-box">
+                            <span class="trending-number place-items-center">03</span>
+                            <img src="../static/images/trending/trending-3.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            
+                            <h3 class="title article-title">Otra noticia</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-image-box">
+                            <span class="trending-number place-items-center">04</span>
+                            <img src="../static/images/trending/trending-4.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            
+                            <h3 class="title article-title">Otra noticia</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick read -->
+        
+        <!-- Older posts -->
+        <section class="older-posts section">
+
+            <div class="container">
+
+                <h2 class="title section-title" data-name="Noticias antiguas">Noticias Antiguas</h2>
+
+                <div class="older-posts-grid-wrapper d-grid">
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="../static/images/older_posts/older_posts-1.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                            <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores tempore vitae itaque sunt quia nostrum minus iure ipsa ullam expedita culpa, dolorum earum aut impedit voluptatibus sit quaerat id.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="../static/images/older_posts/older_posts-2.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                            <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores tempore vitae itaque sunt quia nostrum minus iure ipsa ullam expedita culpa, dolorum earum aut impedit voluptatibus sit quaerat id.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="../static/images/older_posts/older_posts-3.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                            <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores tempore vitae itaque sunt quia nostrum minus iure ipsa ullam expedita culpa, dolorum earum aut impedit voluptatibus sit quaerat id.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="../static/images/older_posts/older_posts-4.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                            <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores tempore vitae itaque sunt quia nostrum minus iure ipsa ullam expedita culpa, dolorum earum aut impedit voluptatibus sit quaerat id.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="../static/images/older_posts/older_posts-5.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+
+                            <div class="article-data">
+                                <span class="article-date">14 Ago 2022</span>
+                            </div>
+                            <h3 class="title article-title">Esto es una noticia</h3>
+                            <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores tempore vitae itaque sunt quia nostrum minus iure ipsa ullam expedita culpa, dolorum earum aut impedit voluptatibus sit quaerat id.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="see-more-container">
+                    <a href="#" class="btn see-more-btn place-items-center">
+                        Ver más <div class="i ri-arrow-right-s-line"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Popular tags -->
+        <!-- <section class="popular-tags section">
+
+            <div class="container">
+
+                <h2 class="title section-title" data-name="Etiquetas populares">Etiquetas Populares </h2>
+                    <a href="#" class="article">
+                        <span class="tag-name">#viajes</span>
+                        <img src="" alt="" class="article-image">
+                    </a>
+                <div class="popular-tags-container d-grid">
+
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Newsletter -->
+
+        <!-- Footer -->
+        <footer class="footer section">
+
+            <div class="footer-container container d-grid">
+
+                <div class="company-data">
+                    <a href="./index.html">
+                        <h2 class="logo-footer">Instituto Barranqueras</h2>
+                    </a>
+                    <p class="company-description">
+                        Somos el primer instituto de nivel terciario de la localidad de Barranqueras.<br>
+                        Apostamos a la transformación comunitaria de nuestra localidad. 
+                    </p>
+                    <ul class="list social-media">
+                        <h4>SEGUINOS EN NUESTRAS REDES</h4>
+                        <li class="list-item">
+                            <a href="https://www.instagram.com/institutobarranqueras/" class="list-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.facebook.com/institutobarranqueras" class="list-link">
+                                <i class="ri-facebook-circle-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="title footer-title">Categorías</h6>
+
+                    <ul class="list footer-list">
+                        <li class="list-item">
+                            <a href="#" class="list-link">Ejemplo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+<!-- Swiper.js Styles -->
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<!-- Custom script Styles -->
+
+{% endblock content %}

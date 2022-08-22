@@ -1,21 +1,171 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fuente 'Lato' -->
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato?selection.family=Lato:wght@400;900">
+        <!-- Icono de la organizacion -->
+        <link rel="icon" href=".\login\img\cropped-Logo-Curvas-01-32x32.png" sizes="32x32"/>
+        <!-- Remix icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+        <!-- Swiper.js Styles -->
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+        <!-- Custon Styles -->
+        <link rel="stylesheet" href=".\assets\css\main.css">
+        <title>Hola</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" id="header">
 
-{% load static %}
+            <nav class="navbar container">
 
-{% block title %} {{post.title}} {% endblock title %}
+                <a href="./index.html">
+                    <img src="./assets/images/Logo-Curvas-hor-02-303x119.png" alt="">
+                    <h2 class="logo">Blog de noticias</h2>
+                </a>
+                <div class="menu" id="menu">
+                    <ul class="list">
+                        <li class="list-item">
+                            <a href="#" class="list-link current">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Institucional</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Noticias</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Categorías</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Contacto</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link screen-lg-hidden">Acceder</a>
+                        </li>
+                        <li class="list-item screen-lg-hidden">
+                            <a href="#" class="list-link">Registrarse</a>
+                        </li>
 
-{% block content %}
-Detalle de las noticias<br>
+                    </ul>
+                </div>
 
-    {{post.title}}
-    {{post.excerpt}}
-    {{post.content}}
-    <br>
-    <a href="{% url 'home' %}">
-        Inicio del sitio<br>
-    </a>
+                <div class="list list-right">
+                    <button class="btn place-items-center" id="theme-toggle-btn">
+                        <i class="ri-sun-line sun-icon"></i>
+                        <i class="ri-moon-line moon-icon"></i>
+                    </button>
 
-    <a href="{% url 'blog:home' %}">
-        Inicio de las noticias (blog)<br>
-    </a>
-{% endblock content %}
+                    <button class="btn place-items-center" id="search-icon-btn">
+                        <i class="ri-search-line"></i>
+                    </button>
+
+                    <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                        <i class="ri-menu-3-line open-menu-icon"></i>
+                        <i class="ri-close-line close-menu-icon"></i>
+                    </button>
+
+                    <a href="#" class="list-link screen-sm-hidden">Acceder</a>
+                    <a href="#" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
+                        <span>Registrarse</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Buscar -->
+        <div class="search-form-container container" id="search-form-container">
+
+            <div class="form-container-inner">
+
+                <form action="" class="form">
+                    <input type="text" class="form-input" placeholder="Buscar">
+                    <button class="btn form-btn" type="submit">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+                <span class="form-note">Presiona ESC para cerrar.</span>
+            </div>
+
+            <button class="btn form-close-btn place-items-center" id="form-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <!-- Blog post -->
+        <section class="blog-post section-header-offset">
+
+            <div class="blog-post-container container">
+
+                <div class="blog-post-data">
+                    <h3 class="title blog-post-title">Esto es una noticia</h3>
+                    <div class="article-data">
+                        <span class="article-data-date">18 Ago 2022</span>
+                    </div>
+                    <img src="./assets/images/featured/featured-1.jpg" alt="">
+                </div>
+
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eligendi excepturi nostrum provident aut a maxime deleniti hic saepe quis, odit sint assumenda laboriosam reprehenderit vitae omnis rerum rem! Debitis!</p>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus esse soluta! Tempora aliquam, delectus itaque ullam sit explicabo, voluptatem harum quis reprehenderit a deserunt laborum veniam omnis, minima excepturi.</p>
+                </div>
+            </div>
+            <!-- <form action="/html/tags/html_form_tag_action.cfm" method="post">
+                <div>
+                    
+                    <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+                        Hey... say something!
+                    </textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form> -->
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer section">
+
+            <div class="footer-container container d-grid">
+
+                <div class="company-data">
+                    <a href="./index.html">
+                        <h2 class="logo-footer">Instituto Barranqueras</h2>
+                    </a>
+                    <p class="company-description">
+                        Somos el primer instituto de nivel terciario de la localidad de Barranqueras.<br>
+                        Apostamos a la transformación comunitaria de nuestra localidad. 
+                    </p>
+                    <ul class="list social-media">
+                        <h4>SEGUINOS EN NUESTRAS REDES</h4>
+                        <li class="list-item">
+                            <a href="https://www.instagram.com/institutobarranqueras/" class="list-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.facebook.com/institutobarranqueras" class="list-link">
+                                <i class="ri-facebook-circle-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="title footer-title">Categorías</h6>
+
+                    <ul class="list footer-list">
+                        <li class="list-item">
+                            <a href="#" class="list-link">Ejemplo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+<!-- Swiper.js Styles -->
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<!-- Custom script Styles -->
+<script src=".\assets\js\main.js"></script>
+    </body>
+</html>

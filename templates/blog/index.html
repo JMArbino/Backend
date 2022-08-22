@@ -1,18 +1,12 @@
 {% extends 'base.html' %}
-
-{% block title %} Noticias (Blog) {% endblock title %}
-
+{% block title %}Instituto Barranqueras - Blog{% endblock title %}
 {% block content %}
-Noticias (Blog)<br>
-...Página de inicio de las noticias (blog)...<br>
+
 {% for post in posts %}
-<a href="{% url 'blog:post-detail' slug=post.slug %}">
-    {{post.title}}
-    {{post.excerpt}}
-    <br>
-</a>
+{{post.title}}
+{{post.excerpt}}
+{{[post.content]}}
 {% endfor %}
-<a href="{% url 'home' %}">
-    Inicio del sitio
-</a>
+
+Hola
 {% endblock content %}
